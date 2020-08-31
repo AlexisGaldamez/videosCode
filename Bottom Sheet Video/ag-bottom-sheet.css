@@ -1,0 +1,46 @@
+.ag-bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 950;
+    width: 100%;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    overflow-y: auto;
+    background-color: white;
+    border-top: 1px solid rgba(0,0,0,.1);
+    transform: translateY(100%);
+    /*transition: 1s;*/
+}
+
+.ag-bottom-sheet--hidden {
+    /*transform: translateY(100%);*/
+    animation-name: go-down-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ag-bottom-sheet--visible {
+    /*transform: translateY(100%);*/
+    animation-name: go-up-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ag-bottom-sheet--60 {
+    height: 60%;
+}
+
+.ag-bottom-sheet--80 {
+    height: 80%;
+}
+
+@keyframes go-up-animation {
+  from {transform: translateY(100%)}
+  to {transform: translateY(0%);}
+}
+
+@keyframes go-down-animation {
+  from {transform: translateY(0);}
+  to {transform: translateY(100%)}
+}
